@@ -4,7 +4,7 @@ import './ui.css'
 
 const TABLE_HEIGHT = 8
 const TABLE_WIDTH = 8
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+const colors = ['red', 'orange', 'green', 'blue', 'purple']
 
 class App extends React.Component {
   state = {
@@ -32,7 +32,7 @@ class App extends React.Component {
       const candies = []
       row.forEach((colorIndex, j) => {
         const candyColor = colors[colorIndex]
-        const cell = <td key={`cell-${i}-${j}`} id={`cell-${i}-${j}`}><img src={require(`./imgs/${candyColor}.png`)}/></td>
+        const cell = <td key={`cell-${i}-${j}`} id={`cell-${i}-${j}`}><img src={require(`./imgs/${candyColor}.svg`)}/></td>
         candies.push(cell)
       })
       game.push(candies)
